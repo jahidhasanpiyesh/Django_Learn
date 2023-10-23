@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+</head>
+<body>
+    <h1><p>real data</p></h1>
+    <h2>{{p1}}</h2>
+    <h2>{{p2}}</h2>
+    <h2>{{p3}}</h2>
+    <h2>{{p4}}</h2>
+
+    <h1><p>filter one data</p></h1>
+    <p>floatformat</p>
+    <h2>{{p1|floatformat}}</h2>
+    <h2>{{p2|floatformat}}</h2>
+    <h2>{{p3|floatformat}}</h2>
+    <h2>{{p4|floatformat}}</h2>
+
+    <h1><p>filter two data</p></h1>
+    <p>floatformat:0</p>
+    <h2>{{p1|floatformat:0}}</h2>
+    <h2>{{p2|floatformat:0}}</h2>
+    <h2>{{p3|floatformat:0}}</h2>
+    <h2>{{p4|floatformat:0}}</h2>
+
+    <h1><p>filter one data</p></h1>
+    <p>floatformat:3</p>
+    <h2>{{p1|floatformat:3}}</h2>
+    <h2>{{p2|floatformat:3}}</h2>
+    <h2>{{p3|floatformat:3}}</h2>
+    <h2>{{p4|floatformat:3}}</h2>
+
+    <h1><p>filter one data</p></h1>
+    <p>floatformat:-3</p>
+    <h2>{{p1|floatformat:-3}}</h2>
+    <h2>{{p2|floatformat:-3}}</h2>
+    <h2>{{p3|floatformat:-3}}</h2>
+    <h2>{{p4|floatformat:-3}}</h2>
+
+</body>
+</html>
