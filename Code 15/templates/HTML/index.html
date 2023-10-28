@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOME</title>
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body>
+
+    {% comment %} condition is very esy but logic way to hard this try or project and clear then project. {% endcomment %}
+<p>First step</p>
+{% if name and roll %}
+<h1> hello {{name}} and {{roll}}</h1>
+{% endif %}
+
+<p>second step</p>
+{% if name or roll %}
+<h1> hello {{name}} or {{roll}}</h1>
+{% endif %}
+
+<p>second step</p>
+{% if not roll %}
+<h1>not this values</h1>
+{% endif %}
+
+</body>
+</html>
