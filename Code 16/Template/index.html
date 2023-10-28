@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHOOL</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="home">
+
+        <p><h1>try three condition use if-elif-else</h1></p>
+        {% if nm == 'phulpur' and sit <= 100 %}
+        <h1>using if condition School name {{nm}} seat {{sit}}</h1>
+        {% elif nm == 'phulpur' %}
+        <h2>using elif condition School name {{nm}} </h2>
+        {% else %}
+        <h3>conditon is not work and last work to else conditions </h3>
+        {% endif %}
+
+    </div>
+    
+
+</body>
+</html>
