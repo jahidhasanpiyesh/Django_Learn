@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<!-- ------------Simple way show This data Output Filter ----------- -->
+<div class="first">
+    {{Name|upper}} <br>
+    {{Name|lower}} <br>
+</div>
+    
+
+<!-- ----------all data show just one line show---------- -->
+    <div class="second">
+        {% for i in Name %}
+        {{i}}
+        {% endfor %} <br>
+    </div>
+    
+
+<!-- --------Step way one by one data show ----------- -->
+    
+    {% for i in Name %}
+    {{i}} <br>
+    {% endfor %} <br>
+
+<!-- -------Reversed this data just use   reversed word ---------- -->
+ 
+<ul>
+    {% for i in Name reversed %}
+    <li>{{i}} <br></li>
+    {% endfor %} <br>
+</ul>   
+    
+ <!-- -------- Using to empty -------- -->
+    {% for i in Name %}
+    {{i}} <br>
+    {% empty %}
+    <h3>Data is empty</h3>  <!--just remove function input data--> 
+    {% endfor %} <br>
+ 
+<!-- --Using Predefined For Loop --[counter counter0 first last revcounter revcounter0]-- -->
+    <!-- --- using for one conditions step to step --- -->
+
+    {% for i in Name %}
+    <!-- {{forloop.counter}} {{i}} <br> -->
+    <!-- {{forloop.counter0}} {{i}} <br> -->
+    <!-- {{forloop.first}} {{i}} <br> -->
+    <!-- {{forloop.last}} {{i}} <br> -->
+    <!-- {{forloop.revcounter}} {{i}} <br> -->
+    <!-- {{forloop.revcounter0}} {{i}} <br> -->
+    {% endfor %} 
+
+
+</body>
+</html>
