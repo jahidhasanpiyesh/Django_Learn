@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <!-- {{total}} -->
+    {% for key, value in total.items %}
+    {{key}} = {{value}} <br>
+    {% for k, v in value.items %}
+    {{k}} = {{v}} <br>
+    {% endfor %}
+    {% endfor %}
+
+
+    <!-- ----- small data to fixing this problem ----- -->
+    <!-- -- all data to show -- -->
+    
+    <!-- {{total}} <br> -->
+
+    <!-- -- step way data access -- -->
+    <!-- very importent -- for key, value in total.items--  -->
+   
+    <!-- {% for key, value in total.items %}
+    {{key}} = {{value}} <br>
+    {% endfor %} -->
+
+</body>
+</html>
