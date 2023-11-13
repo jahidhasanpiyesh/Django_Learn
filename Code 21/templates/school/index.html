@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'css/school.css' %}">
+</head>
+<body>
+    <h1>Hi Ther {{school}}</h1>
+    <img src="{% static 'images/school.jpg' %}" alt="school">
+    <hr>
+    <form action="">
+        <input type="button" value="Click Me" onclick='school()'>
+    </form>
+    <script src="{% static 'js/school.js' %}"></script>
+</body>
+</html>
