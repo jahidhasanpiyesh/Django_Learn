@@ -1,0 +1,16 @@
+{% extends "corinfo/base.html" %}
+{% load static %}
+{% block cssfile %}
+{{block.super}}
+<link rel="stylesheet" href="{% static 'course/css/course.css' %}">
+{% endblock cssfile%}
+
+{% block title %}course{% endblock title %}
+{% block nev %} {{block.super}}
+    <nav>
+        <ul>
+            <li>block super</li>
+        </ul>
+    </nav>
+{% endblock nev %}
+{% block body %}<h1>This is course Page</h1>{% endblock body %}
