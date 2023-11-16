@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Base{% endblock title %}</title>
+    
+    {% block cssfile %}
+    <link rel="stylesheet" href="{% static 'corinfo/css/corinfo.css' %}">
+    {% endblock cssfile%}
+
+</head>
+<body>
+    {% block nev %}
+    <nav>
+        <ul>
+            <li>Base</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    {% endblock nev %}
+
+    {% block img %}
+    <img src="{% static 'corinfo/images/corinfo.jpg'%}" alt="corinfo">
+    {% endblock img %}
+    
+    {% block body %}<h1>This is Base Page</h1>{% endblock body %}
+
+    
+    <hr>
+    <form action="">
+        {% block button%}
+        <input type="button" value="Click Me" onclick='home()'>
+        {% endblock button %}
+    </form>
+    
+    {% block js %}
+    <script src="{% static 'corinfo/js/corinfo.js' %}"></script>
+    {% endblock js %}
+</body>
+</html>
