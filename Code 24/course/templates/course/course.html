@@ -1,0 +1,29 @@
+{% extends "corinfo/base.html" %}
+{% load static %}
+{% block cssfile %}
+{{block.super}}
+<link rel="stylesheet" href="{% static 'course/css/course.css' %}">
+{% endblock cssfile%}
+
+{% block title %}course{% endblock title %}
+{% block nev %} {{block.super}}
+    <nav>
+        <ul>
+            <li>block super</li>
+        </ul>
+    </nav>
+{% endblock nev %}
+
+{% block img %}
+<img src="{% static 'course/images/course.jpg'%}" alt="course">
+{% endblock img %}
+
+{% block body %}<h1>This is course Page</h1>{% endblock body %}
+
+{% block button%} {{block.super}}
+    <input type="button" value="Click Me" onclick='courseone()'>
+{% endblock button %}
+
+{% block js %} {{block.super}}
+    <script src="{% static 'course/js/course.js' %}"></script>
+{% endblock js %}
