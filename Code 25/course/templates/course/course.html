@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} <title>course</title> {% endblock title %}
+{% block h1 %}
+<h1>This is Course Page</h1>
+{% endblock h1 %}
+{% block button %}
+<form action="">
+    <input type="button" value="Click Me" onclick='course()'>
+</form>
+{% endblock button %}
+{% block js %} <script src="{% static 'course/js/course.js' %}"></script> {% endblock js %}

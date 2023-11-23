@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %} <title>base</title> {% endblock title %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="{% url "basepage" %}">BASE</a></li>
+            <li><a href="{% url "homepage" %}">HOME</a></li>
+            <li><a href="{% url "aboutpage" %}">ABOUT</a></li>
+            <li><a href="{% url "coursepage" %}">COURSE</a></li>
+        </ul>
+    </nav>
+    <hr>
+    {% block h1 %}
+    <h1>This is Base Page</h1>
+    {% endblock h1 %}
+
+    {% block button %}
+    <form action="">
+        <input type="button" value="Click Me" onclick='base()'>
+    </form>
+    {% endblock button %}
+    
+    {% block js %} <script src="{% static 'js/all.js' %}"></script> {% endblock js %}
+</body>
+</html>
