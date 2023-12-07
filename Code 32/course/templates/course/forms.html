@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Page</title>
+</head>
+<body>
+    <h3>all Code</h3>
+    
+    {% comment %}---------- use to advance topic code -----------{% endcomment %}
+    <div>
+        <label for="{{st.name.id_for_label}}">Name:</label>
+        {{st.name}}
+        {{st.email}}
+    </div>
+    <div>
+        <h4>label_teg use</h4>
+        <label for="{{st.name.label_tag}}"></label>
+        <h4>label use</h4>
+        {{st.name.label}}
+        <h4>inital value use</h4>
+        {{st.name.value}}
+        <h4>html_name use</h4>
+        {{st.name.html_name}}
+        <h4>help_text use</h4>
+        {{st.name.help_text}}
+        <h4>field.required use</h4>
+        {{st.name.field.required}}
+    </div>
+</body>
+</html>
