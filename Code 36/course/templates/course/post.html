@@ -1,0 +1,14 @@
+{% extends "course/forms.html" %}
+{% block title %} <title>Post Page</title> {% endblock title %}
+{% block form %}
+    <h1>Use to Post method and all info not Visible</h1>
+    <h2>Submit Your Data</h2>
+
+    {% comment %} ------use to method and dont miss to csrf token------ {% endcomment %}
+    <form action="" method="post">
+        {% csrf_token %} 
+        {{s.as_p}}
+<br> <h4>Your Data secure</h4>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock form %}
