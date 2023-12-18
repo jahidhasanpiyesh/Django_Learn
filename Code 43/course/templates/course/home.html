@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        {% comment %} ----- remove to volet -----
+        ---- use to color ----
+        ---- and use to margin or padding ---- {% endcomment %}
+        .errorlist{
+            List-style-type:none;
+            color:red;
+            margin:0;
+            padding:0;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {{form.non_field_errors}}
+        {% for field in form %}
+        <div>
+            {{field.lable_tag}} {{field}}
+        </div>
+        
+        {% endfor %}
+        {{from}}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
