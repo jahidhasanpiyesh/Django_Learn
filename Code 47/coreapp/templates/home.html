@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+    {% block title %} <title>Home</title> {% endblock title %}
+
+    {% block h1 %}<h1>HOME PAGE</h1> {% endblock h1 %}
+    {% block a %}{% endblock a %}
+    {% block botton %} <a href="{% url 'indexpage' %}">Back</a><br>{% endblock botton %} 
+    {% block name %} {{name}}  {% endblock name %}
+</body>
+</html>
