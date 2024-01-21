@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        .info{
+            color: red;
+        }
+        .success{
+            color: blue;
+        }
+        .warning{
+            color:brown;
+        }
+        .error{
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <h1> Index Page</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Submit">
+    </form> <br>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags %} {{message.tags}} 
+    <span class = '{{message.tags}}'>{{message}}<br></span>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
