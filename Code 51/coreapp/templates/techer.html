@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techer Forms</title>
+    <style>
+        .info{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Techer Forms</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{te}}
+        <input type="submit" value="Submit">
+    </form> <br>
+    {% if messages %}
+
+    {% comment %} ------ Must be use for loops----- {% endcomment %}
+    {% for i in messages %}
+    {% if i.tags %} 
+
+    {% comment %} ---- Set to dynamic message coler change ----- {% endcomment %}
+    <span class = '{{i.tags}}' >{{i}}</span>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
