@@ -17,6 +17,6 @@ def techer(request):
         if t.is_valid():
             t.save()
     else:
-        t = studentforms()
+        t = techerforms()
     
     return render(request,'techer.html',{'te':t})
