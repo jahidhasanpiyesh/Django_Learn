@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+
+    {% comment %}---- forms Show Section ------{% endcomment %}
+    <form action="" method="post" novalidate>
+        {% csrf_token %}
+        {% for forms in form %}
+        {{forms.label_tag}} {{forms}} {{forms.errors | striptags}} <br> <br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+
+    {% comment %} ---- message Show Section----  {% endcomment %}
+    {% if messages %}
+    {% for message in messages %}
+    {{message}}
+    {% endfor %}
+    {% endif %}
+</body>
+</html>
