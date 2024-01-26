@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+</head>
+<body>
+    <h1>Welcome {{name}}</h1>
+    {% if messages %}
+    {% for message in messages %}
+    <small {% if message_tags%} class = "{{message_tags}}" {% endif %}>{{message}}</small>
+    {% endfor %}
+    {% endif %}
+    <a href="{% url 'log_out' %}"><input type="button" value="Logout"></a>
+</body>
+</html>
