@@ -33,7 +33,9 @@
     {% comment %} Error message Show this code  {% endcomment %}
     {% if messages %}
     {% for message in messages %}
-    <small {% if message_tags%} class = "{{message_tags}}" {% endif %}>{{message}}</small>
+    {% if message.tags %}
+    <span class = '{{message.tags}}'>{{message}}<br></span>
+    {% endif %}
     {% endfor %}
     {% endif %}
 </body>
