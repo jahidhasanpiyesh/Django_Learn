@@ -13,7 +13,7 @@ def Sign_up(request):
         if fm.is_valid():  # chack valid data 
             messages.success(request, 'Your Form is Submit Successfully !!')
             fm.save()
-        fm = UserForm()        
+            
     else:
         fm = UserForm()
     return render(request, 'coreapp/signup.html', {'from':fm})
