@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deshbord Page</title>
+</head>
+<body>
+    <h1>Welcome {{name}}</h1>
+ 
+    {% comment %}   note please   {% endcomment %}
+    {% if perms.coreapp.delete_blog %} 
+        <h3>Delete Permission True </h3>
+        <input type="button" value="Delete">
+    {%else%}
+        <h3>Delete Permission False</h3>
+    {% endif %}
+
+
+
+    <a href="{% url 'log_out' %}"><input type="button" value="Logout"></a>
+    
+</body>
+</html>
